@@ -1,0 +1,21 @@
+<?php
+return [
+  '未設定'=>'未設定',
+  'pop'=>'pop',
+  'rock'=>'rock',
+  'hiphop'=>'hiphop',
+  'RnB'=>'RnB',
+  'hyperpop'=>'hyperpop',
+  'techno'=>'techno',
+  'house'=>'house',
+  'EDM'=>'EDM',
+  'IDM'=>'IDM',
+  'jazz'=>'jazz',
+  'soul'=>'soul',
+  'funk'=>'funk',
+  'experimental'=>'experimental',
+  'folk'=>'folk',
+  'country'=>'country',
+  'world'=>'world',
+  'others'=>'others',
+];
