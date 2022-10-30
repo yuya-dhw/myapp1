@@ -1,6 +1,6 @@
 <div class="artist__song">
 @if($song->global_id == Auth::id())
-  <a href="/profile/edit/song" class="edit__button pc__active" id="edit__button_song">編集</a>
+  <a href="{{route('song_edit')}}" class="edit__button pc__active" id="edit__button_song">編集</a>
 @endif
 @isset($song->path)
   <div class="song__area">

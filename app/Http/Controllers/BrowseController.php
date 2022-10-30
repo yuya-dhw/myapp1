@@ -17,9 +17,13 @@ use App\Models\Connection;
 class BrowseController extends Controller
 {
     public function index($name){
+        if(User::where('name',$name)->doesntExist()){
+            abort(404);
+        }
+
         $specific_user = User::where('name', $name)->first();
         $id = $specific_user->id;
-     
+       
         //マイページ画像の定義
         if(Auth::check()){
             $page = Image::where('global_id', Auth::id())->first();

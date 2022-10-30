@@ -1,5 +1,5 @@
 @if($image->global_id == Auth::id())
-  <a href="/profile/edit/image" id="edit__button_image" class="edit__button">編集</a>
+  <a href="{{route('image_edit')}}" id="edit__button_image" class="edit__button">編集</a>
 @endif
 <div class="image__attachment">
 

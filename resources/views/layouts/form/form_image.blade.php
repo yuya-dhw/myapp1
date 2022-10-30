@@ -1,7 +1,7 @@
 @extends('layouts.form')
 @section('form_area')
 <h2 class="form__title">プロフィール画像編集</h2>
-<form action="/profile/edit/image/post" method="POST" enctype="multipart/form-data">
+<form method="POST" action="{{route('image_post')}}"  enctype="multipart/form-data">
   @csrf
   <div class="form__area_image">
   

@@ -2,7 +2,7 @@
 @section('form_area')
 <h2 class="form__title">基本情報編集</h2>
 <div class="form__area_base">
-<form action="/profile/edit/base/post" method="POST">
+<form action="{{route('edit_base')}}" method="POST">
   @csrf
   <ul class="form__list_base">
     <li>

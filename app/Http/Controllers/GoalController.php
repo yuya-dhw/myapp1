@@ -21,7 +21,7 @@ class GoalController extends Controller
         $goal->update([
             'body'=>$request->input('goal_body'),
         ]);
-        return redirect('/profile');
+        return redirect(route('index'));
     }
 }
 

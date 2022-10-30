@@ -20,7 +20,7 @@ class FilmController extends Controller
             'film_link'=>'bail|required|max:255|url',
         ]);
         if($validator->fails()){
-            return redirect('/profile/edit/film')
+            return redirect(route('film_edit'))
             ->withErrors($validator)
             ->withInput();
         };
@@ -29,7 +29,7 @@ class FilmController extends Controller
             'name'=>$request->input('film_name'),
             'link'=>$request->input('film_link'),
         ]);
-        return redirect('/profile/edit/film');
+        return redirect(route('film_edit'));
     }
     public function prepare(Request $request, $id){
         $films = Film::Where('global_id', Auth::id())->get();
@@ -42,12 +42,12 @@ class FilmController extends Controller
             'name'=>$request->input('film_name'),
             'link'=>$request->input('film_link'),
         ]);
-        return redirect('/profile/edit/film');
+        return redirect(route('film_edit'));
     }
     public function delete(Request $request, $id){
         $film = Film::find($id);
         $film->delete();
-        return redirect('/profile/edit/film');
+        return redirect(route('film_edit'));
 
     }
 }

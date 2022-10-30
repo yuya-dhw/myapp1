@@ -28,7 +28,7 @@
             @enderror
         </div>
         <div class="submit__area">
-            <button type="submit" class="auth__button">ログオン</button>
+            <button type="submit" class="auth__button">ログイン</button>
         </div>
     </form>
 </div>

@@ -4,7 +4,7 @@
 
 <div class="form__area_film">
 <div class="back__button_area">
-  <a href="/profile" class="back__button_content">完了</a>
+  <a href="{{route('index')}}" class="back__button_content">完了</a>
 </div>
 @if(DB::table('films')->where('global_id', Auth::id())->exists())
 <h3 class="film__title_sub">現在の動画</h3>
@@ -30,7 +30,7 @@
 @endif
 
 
-<form action="/profile/edit/film/post" method="POST">
+<form action="{{route('film_create')}}" method="POST">
   @csrf
   
 <ul class="form__list_film">

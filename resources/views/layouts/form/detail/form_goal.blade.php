@@ -12,7 +12,7 @@
     @endif
 
 <div class="form__area_goal">
-  <form action="/profile/edit/goal/post" method="POST">
+  <form action="{{route('goal_post')}}" method="POST">
   @csrf
   <textarea name="goal_body" id="goal_body" cols="30" rows="10">{{old('body', $goal->body)}}</textarea>
   <button type="submit" class="goal__submit_button">決定</button>

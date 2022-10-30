@@ -1,6 +1,6 @@
 <!doctype html>
 @if($base->global_id == Auth::id())
-  <a href="/profile/edit/base" id="edit__button_base" class="edit__button">編集</a>
+  <a href="{{route('base')}}" id="edit__button_base" class="edit__button">編集</a>
 @endif
 <div class="artist__top pc__active">
       <h3 class="top__copy">{{$base->copy}}</h3>
@@ -31,9 +31,9 @@
         ['global_id', Auth::id()],
         ['connected_id', $base->global_id]
         ])->doesntExist())
-        <button formaction="/connection/add" class="interaction__general connection__button" name="connection">人脈に追加</button>
+        <button formaction="{{route('connection_add')}}" class="interaction__general connection__button" name="connection">人脈に追加</button>
         @else
-          <button formaction="/connection/delete" class="interaction__delete" name="connection">人脈を削除</button>
+          <button formaction="{{route('connection_delete')}}" class="interaction__delete" name="connection">人脈を削除</button>
         @endif
         </form>
         <button class="interaction__general share__button" name="share">共有</button>

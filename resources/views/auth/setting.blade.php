@@ -4,7 +4,7 @@
 @if(Auth::check())
 <form action="{{route('logout')}}" method="POST">
   @csrf
-  <button type="submit" class="danger__submit_button">ログオフ</button>
+  <button type="submit" class="danger__submit_button">ログアウト</button>
 </form>
 @endif
 </div>

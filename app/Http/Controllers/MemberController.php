@@ -22,7 +22,7 @@ class MemberController extends Controller
             'member_link'=>'nullable|max:255|url',
         ]);
         if($validator->fails()){
-            return redirect('/profile/edit/member')
+            return redirect(route('member_edit'))
             ->withErrors($validator)
             ->withInput();
         };
@@ -33,7 +33,7 @@ class MemberController extends Controller
             'role'=>$request->input('member_role'),
             'link'=>$request->input('member_link'),
         ]);
-        return redirect('/profile/edit/member');
+        return redirect(route('member_edit'));
     }
     public function prepare(Request $request,$id){
         $members = Member::where('global_id', Auth::id())->get();
@@ -47,11 +47,11 @@ class MemberController extends Controller
             'part'=>$request->input('member_part'),
             'role'=>$request->input('member_role'),
         ]);
-        return redirect('/profile/edit/member');
+        return redirect(route('member_edit'));
     }
     public function delete(Request $request, $id){
         $member = Member::find($id);
         $member->delete();
-        return redirect('/profile/edit/member');
+        return redirect(route('member_edit'));
     }
 }

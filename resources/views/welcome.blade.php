@@ -5,7 +5,7 @@
         @if (Route::has('login'))
             <div class="general__header welcome__header">
                 @auth
-                    <a href="{{ url('/profile') }}" class="welcome__link">Home</a>
+                    <a href="{{ route('index') }}" class="welcome__link">Home</a>
                 @else
                     <a href="{{ route('login') }}" class="welcome__link">ログオン</a>
 

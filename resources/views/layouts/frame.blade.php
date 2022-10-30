@@ -1,6 +1,6 @@
 <div class="general__header">
     <img src="{{asset('/storage/common/logo.png')}}" alt="logo">
-    <a href="/setting"><img src="{{asset('/storage/common/setting.png')}}" alt="setting"></a>
+    <a href="{{route('setting')}}"><img src="{{asset('/storage/common/setting.png')}}" alt="setting"></a>
 </div>
 
 <div class="contents-wrapper">
@@ -28,7 +28,7 @@
       </li>
       @auth
       <li class="navigation__icon">
-        <a href="/profile"><img src="{{asset($mypage)}}" alt="mypage icon" id="mypage"></a>
+        <a href="{{route('index')}}"><img src="{{asset($mypage)}}" alt="mypage icon" id="mypage"></a>
       </li>
       @endauth
       @if($mypage == 1)

@@ -74,6 +74,6 @@ class BaseController extends Controller
             'event_link'=>$request->input('event_link'),
             'event_link_con'=>$request->input('event_link_com'),
         ]);
-        return redirect('profile');
+        return redirect(route('index'));
     }
 }

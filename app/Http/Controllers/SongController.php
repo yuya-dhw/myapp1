@@ -24,7 +24,7 @@ class SongController extends Controller
             'song_description'=>'bail|required|max:40',
         ]);
         if($validator->fails()){
-            return redirect('/profile/edit/song')
+            return redirect(route('song_edit'))
             ->withErrors($validator)
             ->withInput();
         };
@@ -44,6 +44,6 @@ class SongController extends Controller
             'name'=>$song_name,
             'description'=>$song_description,
         ]);
-        return redirect('/profile');
+        return redirect(route('index'));
     }
 }

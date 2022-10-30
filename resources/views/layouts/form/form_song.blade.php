@@ -1,7 +1,7 @@
 @extends('layouts.form')
 @section('form_area')
 <h2 class="form__title">楽曲情報編集</h2>
-<form action="/profile/edit/song/post" method="POST" enctype="multipart/form-data">
+<form action="{{route('song_post')}}" method="POST" enctype="multipart/form-data">
   @csrf
   @if($errors->any())
         <div>

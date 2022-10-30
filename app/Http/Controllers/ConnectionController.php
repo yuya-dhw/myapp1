@@ -57,6 +57,6 @@ class ConnectionController extends Controller
         $connection->update([
             'description'=>$request->input('connection_description'),
         ]);
-        return redirect('/profile');
+        return redirect(route('index'));
     }
 }

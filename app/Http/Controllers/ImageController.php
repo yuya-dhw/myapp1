@@ -28,7 +28,7 @@ class ImageController extends Controller
 
         $image = $request->file('profile_image');
         if($image == null){
-            return redirect('profile/edit/image');
+            return redirect(route('image_edit'));
         }
         $name = $image->hashName();
         $image->storeAs('public/profile', $name);
@@ -38,6 +38,6 @@ class ImageController extends Controller
             'path'=>'storage/' . 'profile/' . $name,
         ]);
 
-        return redirect('/profile');
+        return redirect(route('profile'));
     }
 }
