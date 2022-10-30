@@ -26,7 +26,7 @@ use App\Http\Controllers\ConnectionController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::group(['prefix'=>'/kadai_dhf','middleware'=>'auth'], function(){
+Route::group(['middleware'=>'auth'], function(){
     Route::get('profile', [ProfileController::class, 'index'])->name('index');
     Route::get('profile/edit/image', [ImageController::class, 'index'])->name('image_edit');
     Route::post('profile/edit/image/post',[ImageController::class, 'store'])->name('image_post');
@@ -57,10 +57,9 @@ Route::group(['prefix'=>'/kadai_dhf','middleware'=>'auth'], function(){
     })->name('setting');
 
 });
-Route::group(['prefix'=>'kadai_dhf'], function(){
+
     Route::get('profile/{name?}',[BrowseController::class, 'index'])->name('browse');
 
-});
 //準備中のページ群
     Route::get('/search', function(){
         return view('errors.404');
