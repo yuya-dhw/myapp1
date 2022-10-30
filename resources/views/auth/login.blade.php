@@ -32,6 +32,6 @@
         </div>
     </form>
 </div>
-<p class="register__beacon">アカウントをお持ちでない方は<a href="/register">こちら</a></p>
+<p class="register__beacon">アカウントをお持ちでない方は<a href="kadai_dhf/register">こちら</a></p>
 </body>
 @endsection
