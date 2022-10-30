@@ -7,7 +7,7 @@
                 @auth
                     <a href="{{ route('index') }}" class="welcome__link">Home</a>
                 @else
-                    <a href="{{ route('login') }}" class="welcome__link">ログオン</a>
+                    <a href="{{ route('login') }}" class="welcome__link">ログイン</a>
 
                 @if (Route::has('register'))
                     <a href="{{ route('register') }}" class="welcome__link">新規登録</a>

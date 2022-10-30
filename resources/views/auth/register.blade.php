@@ -46,5 +46,5 @@
         </div>
     </form> 
     </div> 
-    <p class="login__beacon">すでにアカウントをお持ちですか？<a href="/login">ログイン</a></p>
+    <p class="login__beacon">すでにアカウントをお持ちですか？<a href="{{route('login')}}">ログイン</a></p>
 @endsection
