@@ -193,6 +193,16 @@ return [
         'event_link_com'=>'イベントのcomusionリンク',
 
         'song'=>'楽曲',
+
+        'member_name'=>'メンバー名',
+        'member_part'=>'パート',
+        'member_role'=>'役職',
+
+        'film_name'=>'動画説明',
+        'film_path'=>'動画リンク',
+
+        'connection_description'=>'関係性',
+
     ],
 
 ];
