@@ -6,7 +6,7 @@
   @csrf
   <ul class="form__list_base">
     <li>
-      <label for="project_name" class="form__label">プロジェクト名</label>
+      <label for="project_name" class="form__label">プロジェクト名<span class="required__badge">必須</span></label>
       <input type="text" name="project_name" id="project_name" value="{{old('project_name',$base_value->project_name)}}">
       @if($errors->has('project_name'))
         <ul class="message__list">
@@ -17,7 +17,7 @@
       @enderror
     </li>
     <li>
-      <label for="copy" class="form__label">キャッチフレーズ</label>
+      <label for="copy" class="form__label">キャッチフレーズ<span class="required__badge">必須</span></label>
       <input type="text" name="copy" id="copy" value="{{old('copy',$base_value->copy)}}">
       @if($errors->has('copy'))
         <ul class="message__list">
@@ -76,7 +76,7 @@
     <li>
     <h4 class="form__label_big">リリース情報</h4>
      
-      <h4 class="form__label">リリースの有無</h4>
+      <h4 class="form__label">リリースの有無<span class="required__badge">必須</span></h4>
       <div class="radio__area">
         @if($base_value->release_exist == 0)
         <input type="radio" name="release_exist" id="release_exist_no" value="0" checked>
@@ -165,7 +165,7 @@
     </li>
     <h4 class="form__label_big">イベント情報</h4>
     <li>
-      <h4 class="form__label">イベントの有無</h4>
+      <h4 class="form__label">イベントの有無<span class="required__badge">必須</span></h4>
       <div class="radio__area">
         @if($base_value->event_exist == 0)
         <input type="radio" name="event_exist" id="event_exist_no" value="0" checked>
