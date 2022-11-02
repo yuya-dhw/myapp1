@@ -19,7 +19,7 @@ class SongController extends Controller
     public function store(Request $request){
         //バリデーション
         $validator = Validator::make($request->all(),[
-            'song'=>'nullable|file',
+            'song'=>'required|file',
             'song_name'=>'required',
             'song_description'=>'bail|required|max:40',
         ]);

@@ -74,3 +74,4 @@ var dropZone = document.getElementById('drop-zone');
             preview.appendChild(img);
         };
     }
+   

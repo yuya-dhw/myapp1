@@ -26,6 +26,7 @@
   @include('layouts.frame')
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.js"></script>
+<script src="https://kit.fontawesome.com/3027a76dab.js" crossorigin="anonymous"></script>
 <script src="{{asset('/js/app.js')}}"></script>
 </body>
 </html>

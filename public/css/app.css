@@ -297,14 +297,51 @@ iframe{
   font-size: 1.8rem;
   padding-top:10px;
 }
-.song__name{
+.song__area{
+  width:100%;
+
+}
+.song__play_area{
+  width:100%;
+  position: relative;
+  height:60px;
+  border-radius: 30px;
+  background-color: #777;
+  margin-top: 20px;
+}
+.play__name{
+  width: 100%;
+  height:100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.play__name h5{
   font-size: 1.6rem;
-  margin-top: 20px;
+  color: #fff;
+  max-width: 220px;
 }
-audio{
-  display: block;
-  margin-top: 20px;
+#play__button{
+  height:60px;
+  width:60px;
+  border-radius: 30px;
+  position: absolute;
+  left:0;
+  background-color: #44bbe7;
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+#play__button i{
+  font-size: 2rem;
+}
+#play__button:hover{
+  color: #fff;
+}
+
+
 .song__nothing{
   padding-top: 40px;
   font-size: 1.8rem;
@@ -845,10 +882,10 @@ input[type="radio"]:checked + label{
   color: #777;
 }
 .file__button{
-  display: block;
+  display: inline-block;
   height: 40px;
   line-height: 40px;
-  width:120px;
+  padding: 0 20px;
   border-radius: 20px;
   font-size: 1.6rem;
   background-color: #44bbe7;
