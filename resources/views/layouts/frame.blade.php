@@ -18,13 +18,13 @@
   <footer class="navigation">
     <ul class="navigation__area">
       <li class="navigation__icon">
-        <a href="/mail"><img src="{{asset('/storage/common/mail.png')}}" alt="mail icon"></a>
+        <a href="{{route('mail')}}"><img src="{{asset('/storage/common/mail.png')}}" alt="mail icon"></a>
       </li>
       <li class="navigation__icon">
-        <a href="/insight"><img src="{{asset('/storage/common/insight.png')}}" alt="recommendation icon"></a>
+        <a href="{{route('insight')}}"><img src="{{asset('/storage/common/insight.png')}}" alt="recommendation icon"></a>
       </li>
       <li class="navigation__icon">
-        <a href="/search"><img src="{{asset('/storage/common/search.png')}}" alt="search icon"></a>
+        <a href="{{route('search')}}"><img src="{{asset('/storage/common/search.png')}}" alt="search icon"></a>
       </li>
       @auth
       <li class="navigation__icon">
@@ -33,7 +33,7 @@
       @endauth
       @if($mypage == 1)
       <li class="navigation__icon">
-        <a href="/register"><img src="{{asset('/storage/common/register.png')}}" alt="registration icon"></a>
+        <a href="{{route('register')}}"><img src="{{asset('/storage/common/register.png')}}" alt="registration icon"></a>
       </li>
       @endif
     </ul>

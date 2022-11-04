@@ -63,11 +63,11 @@ Route::group(['middleware'=>'auth'], function(){
 
 //準備中のページ群
     Route::get('/search', function(){
-        return view('errors.404');
+        abort(404);
     })->name('search');
     Route::get('/insight', function(){
-        return view('errors.404');
+        abort(404);
      })->name('insight');
      Route::get('/mail', function(){
-        return view('errors.404');
+        abort(404);
      })->name('mail');
