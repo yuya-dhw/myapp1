@@ -20,7 +20,7 @@ class ImageController extends Controller
         $old_path = $old_image->path;
         
         if($old_path !== "storage/profile/default.png"){
-            $delete_object = str_replace('storage/', '', '$old_image->path');
+            $delete_object = str_replace('storage/', 'public/', $old_path);
             Storage::delete($delete_object);
         }
         
@@ -38,6 +38,6 @@ class ImageController extends Controller
             'path'=>'storage/' . 'profile/' . $name,
         ]);
 
-        return redirect(route('profile'));
+        return redirect(route('index'));
     }
 }

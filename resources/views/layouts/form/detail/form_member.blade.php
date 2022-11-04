@@ -16,10 +16,10 @@
       <h5 class="member_name">{{$member->name}}</h5>
       </div>
       <div class="member__interaction">
-        <a href="{{route('member_rewrite',['id'=>$member->id])}}">編集</a>
+        <a href="{{route('member_rewrite',['id'=>$member->id])}}"><i class="fa-solid fa-pen-to-square"></i></a>
         <form method="POST" action="{{route('member_delete',['id'=>$member->id])}}">
         @csrf
-        <button type="submit">削除</button>
+        <button type="submit"><i class="fa-solid fa-trash"></i></button>
         </form>
       </div>
     </div>

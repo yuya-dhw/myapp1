@@ -16,10 +16,10 @@
       <h5 class="film__name">{{$film->name}}</h5>
       </div>
       <div class="film__interaction">
-        <a href="{{route('film_rewrite',['id'=>$film->id])}}">編集</a>
+        <a href="{{route('film_rewrite',['id'=>$film->id])}}"><i class="fa-solid fa-pen-to-square"></i></a>
         <form method="POST" action="{{route('film_delete',['id'=>$film->id])}}">
         @csrf
-        <button type="submit">削除</button>
+        <button type="submit"><i class="fa-solid fa-trash"></i></button>
         </form>
       </div>
     </div>

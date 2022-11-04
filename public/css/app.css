@@ -13,6 +13,9 @@ body{
 a{
   font-size:1.6rem;
 }
+i{
+  color:#777;
+}
 iframe{
   display: block;
   margin: 20px auto;
@@ -800,6 +803,17 @@ input[type="radio"]:checked + label{
   color:#e744bb;
   margin-left: 20px;
 }
+.song__delete{
+  text-align: center;
+}
+.danger__link{
+  font-size: 1.6rem;
+  padding: 0 0 5px;
+  display: inline-block;
+  margin: 20px auto 80px;
+  color: #e744bb;
+  border-bottom: solid 1px #e744bb;
+}
 .form__option{
   line-height: 20px;
   font-size: 1.6rem;
@@ -891,6 +905,9 @@ input[type="radio"]:checked + label{
   background-color: #44bbe7;
   color: #fff;
   margin:20px auto;
+}
+.file__button:hover{
+  cursor: pointer;
 }
 .back__button_area{
   display: flex;

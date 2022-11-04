@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 
 use App\Models\Song;
 
@@ -45,5 +46,16 @@ class SongController extends Controller
             'description'=>$song_description,
         ]);
         return redirect(route('index'));
+    }
+    public function delete(Request $request){
+        $song = Song::where('global_id', Auth::id())->first();
+        $song_path = $song->path;
+        $song->delete();
+        $delete_path = str_replace('storage/','public/',$song_path); 
+        Storage::delete($delete_path);
+        Song::create([
+            'global_id'=>Auth::id(),
+        ]);
+        return redirect(route('song_edit'));
     }
 }

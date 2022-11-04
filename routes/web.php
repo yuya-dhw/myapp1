@@ -34,6 +34,7 @@ Route::group(['middleware'=>'auth'], function(){
     Route::post('profile/edit/base/post', [BaseController::class, 'update'])->name('edit_base');
     Route::get('profile/edit/song', [SongController::class, 'index'])->name('song_edit');
     Route::post('profile/edit/song/post', [SongController::class, 'store'])->name('song_post');
+    Route::post('profile/edit/song/delete', [Songcontroller::class, 'delete'])->name('song_delete');
     Route::get('profile/edit/goal', [GoalController::class, 'index'])->name('goal_edit');
     Route::post('profile/edit/goal/post', [GoalController::class, 'update'])->name('goal_post');
     Route::get('profile/edit/member', [MemberController::class, 'index'])->name('member_edit');
