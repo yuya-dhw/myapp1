@@ -5,7 +5,7 @@
     <img src="{{asset('storage/common/logo.png')}}" alt="logo" id="top__logo">
 </header>
 <div class="auth__content">
-    <form  method="POST" action="/login">
+    <form  method="POST" action="{{route('login')}}">
         @csrf
         <div>
             <input name="email" type="email" value="{{old('email')}}" placeholder="メールアドレス"/>
