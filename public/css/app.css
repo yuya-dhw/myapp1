@@ -596,6 +596,9 @@ iframe{
   margin-left: 0;
   margin-top: 20px;
 }
+.artist__song{
+  padding-top: 0;
+}
 
 }
 
