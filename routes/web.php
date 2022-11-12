@@ -11,6 +11,7 @@ use App\Http\Controllers\GoalController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\FilmController;
 use App\Http\Controllers\ConnectionController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,9 +63,8 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('profile/{name?}',[BrowseController::class, 'index'])->name('browse');
 
 //準備中のページ群
-    Route::get('/search', function(){
-        abort(404);
-    })->name('search');
+    Route::get('/search', [SearchController::class, 'index'])->name('search');
+    Route::post('/search/result', [SearchController::class, 'runsearch'])->name('search_result');
     Route::get('/insight', function(){
         abort(404);
      })->name('insight');
