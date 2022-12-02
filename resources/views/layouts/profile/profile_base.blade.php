@@ -1,7 +1,5 @@
 <!doctype html>
-@if($base->global_id == Auth::id())
-  <a href="{{route('base')}}" id="edit__button_base" class="edit__button">編集</a>
-@endif
+
 <div class="artist__top pc__active">
       <h3 class="top__copy">{{$base->copy}}</h3>
       <h2 class="top__project_name">{{$base->project_name}}</h2>

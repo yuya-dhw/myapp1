@@ -1,4 +1,7 @@
 <div class="general__header">
+    @if($user->id == Auth::id())
+    <a href="{{route('edit')}}" id="edit__button_entrance" class="edit__button">編集</a>
+    @endif
     <img src="{{asset('/storage/common/logo.png')}}" alt="logo">
     <a href="{{route('setting')}}"><img src="{{asset('/storage/common/setting.png')}}" alt="setting"></a>
 </div>

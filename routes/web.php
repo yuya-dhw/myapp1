@@ -29,6 +29,9 @@ Route::get('/', function () {
 });
 Route::group(['middleware'=>'auth'], function(){
     Route::get('profile', [ProfileController::class, 'index'])->name('index');
+    Route::get('profile/edit', function(){
+        return view('profile.edit.edit_entrance');
+        })->name('edit');
     Route::get('profile/edit/image', [ImageController::class, 'index'])->name('image_edit');
     Route::post('profile/edit/image/post',[ImageController::class, 'store'])->name('image_post');
     Route::get('profile/edit/base',[BaseController::class, 'index'])->name('base');
