@@ -12,6 +12,7 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\FilmController;
 use App\Http\Controllers\ConnectionController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\InsightController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,9 +69,7 @@ Route::group(['middleware'=>'auth'], function(){
 //準備中のページ群
     Route::get('/search', [SearchController::class, 'index'])->name('search');
     Route::post('/search/result', [SearchController::class, 'runsearch'])->name('search_result');
-    Route::get('/insight', function(){
-        abort(404);
-     })->name('insight');
+    Route::get('/insight', [InsightController::class, 'random'])->name('insight');
      Route::get('/mail', function(){
         abort(404);
      })->name('mail');

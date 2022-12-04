@@ -31,13 +31,13 @@
       </li>
       @auth
       <li class="navigation__icon">
-        <a href="{{route('index')}}"><img src="{{asset($mypage)}}" alt="mypage icon" id="mypage"></a>
+        <a href="{{route('index')}}"><img src="{{asset('/storage/common/register.png')}}" alt="mypage icon" id="mypage"></a>
       </li>
       @endauth
-      @if($mypage == 1)
+      @guest
       <li class="navigation__icon">
         <a href="{{route('register')}}"><img src="{{asset('/storage/common/register.png')}}" alt="registration icon"></a>
       </li>
-      @endif
+      @endguest
     </ul>
   </footer>

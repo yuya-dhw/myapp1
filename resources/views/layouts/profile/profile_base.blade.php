@@ -42,7 +42,11 @@
   <div class="announce__release">
     @if($base->release_exist == 1)
     <a href="#modal1" class="modal__link">
-      <h4 class="announce__type">次のリリース<span class="announce__date">{{$release_month}}&#047;{{$release_day}}</span></h4>
+      <h4 class="announce__type">次のリリース
+        @isset($release_month)
+          <span class="announce__date">{{$release_month}}&#047;{{$release_day}}</span>
+        @endisset
+      </h4>
     </a>
     <div class="remodal" data-remodal-id="modal1">
           <h3 class="announce__name">{{$base->release_name}}</h3>
@@ -67,7 +71,11 @@
   <div class="announce__event">
     @if($base->event_exist == 1)
     <a href="#modal2" class="modal__link">
-      <h4 class="announce__type">次のイベント<span class="announce__date">{{$event_month}}&#047;{{$event_day}}</span></h4>
+      <h4 class="announce__type">次のイベント
+        @isset($event_month)
+          <span class="announce__date">{{$event_month}}&#047;{{$event_day}}</span>
+        @endisset
+      </h4>
     </a>
     <div class="remodal" data-remodal-id="modal2">
           <h3 class="announce__name">{{$base->event_name}}</h3>

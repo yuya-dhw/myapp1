@@ -37,12 +37,7 @@
       </li>
       
       <li class="navigation__icon">
-      @auth
         <a href="{{route('index')}}"><img src="{{asset('/storage/common/register.png')}}" alt="mypage icon" id="mypage"></a>
-      @endauth
-      @empty($mypage)
-        <a href="{{route('register')}}"><img src="{{asset('/storage/common/register.png')}}" alt="registration icon"></a>
-      @endempty
       </li>
       
     </ul>
