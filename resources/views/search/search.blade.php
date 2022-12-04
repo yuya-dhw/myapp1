@@ -4,7 +4,7 @@
   <form action="{{route('search_result')}}" method="POST">
     @csrf
     <div class="search__bar">
-      <input type="text" name="search_bar" id="search_bar">
+      <input type="text" name="search_bar" id="search_bar" placeholder="アーティスト名を入力">
         <button type="submit" class="search__button" value="">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>

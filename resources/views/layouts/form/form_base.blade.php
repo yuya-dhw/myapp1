@@ -32,6 +32,9 @@
       <select name="genre" id="genre" value="{{old('genre',$base_value->genre)}}">
         @foreach(config('genre') as $key =>$value)
           <option value="{{$value}}">{{$value}}</option>
+          @if($value == $base_value->genre)
+            <option value="{{$value}}" selected>{{$value}}</option>
+          @endif
         @endforeach
       </select>
       @if($errors->has('genre'))
@@ -47,6 +50,9 @@
       <select name="type" id="type">
         @foreach(config('type') as $key =>$value)
           <option value="{{$value}}">{{$value}}</option>
+          @if($value == $base_value->type)
+            <option value="{{$value}}" selected>{{$value}}</option>
+          @endif
         @endforeach
       </select>
       @if($errors->has('type'))
@@ -62,6 +68,9 @@
       <select name="place" id="place">
         @foreach(config('pref') as $key =>$value)
           <option value="{{$value}}">{{$value}}</option>
+          @if($value == $base_value->place)
+            <option value="{{$value}}" selected>{{$value}}</option>
+          @endif
         @endforeach
       </select>
       @if($errors->has('place'))
@@ -131,6 +140,9 @@
       <select name="release_type" id="release_type">
         @foreach(config('release_type') as $key =>$value)
           <option value="{{$value}}">{{$value}}</option>
+          @if($value == $base_value->release_type)
+            <option value="{{$value}}" selected>{{$value}}</option>
+          @endif
         @endforeach
       </select>
       @if($errors->has('release_type'))
@@ -220,6 +232,9 @@
       <select name="event_pref" id="event_pref">
         @foreach(config('pref') as $key =>$value)
           <option value="{{$value}}">{{$value}}</option>
+          @if($value == $base_value->event_pref)
+            <option value="{{$value}}" selected>{{$value}}</option>
+          @endif
         @endforeach
       </select>
       @if($errors->has('release_pref'))
