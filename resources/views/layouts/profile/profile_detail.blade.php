@@ -7,11 +7,6 @@
       </ul>
 
       <div id="goal" class="info__area">
-      @if($goal->global_id == Auth::id())
-      <div class="back__button_area">
-        <a href="{{route('goal_edit')}}" class="edit__button" id="edit__button_goal">編集</a>
-      </div>
-      @endif
       @if($goal->body == "目標は未設定です")
         <h4 class="goal__nothing">目標はまだ設定されていません</h4>
       @else
@@ -19,9 +14,6 @@
       @endif
       </div>
       <div id="member" class="info__area">
-        @if($base->global_id == Auth::id())
-          <a href="{{route('member_edit')}}" class="edit__button" id="edit__button_member">編集</a>
-        @endif
         @if(DB::table('members')->where('global_id', Auth::id())->exists())
           <ul class="member__list">
             @foreach($members as $member)
@@ -37,9 +29,6 @@
           @endif
       </div>
       <div id="film" class="info__area">
-      @if($base->global_id == Auth::id())
-              <a href="{{route('film_edit')}}" class="edit__button" id="edit__button_film">編集</a>
-      @endif
         @if(DB::table('films')->where('global_id', Auth::id())->exists())
         <ul class="film__list">
           @foreach($films as $film)

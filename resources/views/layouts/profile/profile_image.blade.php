@@ -1,6 +1,3 @@
-@if($image->global_id == Auth::id())
-  <a href="{{route('image_edit')}}" id="edit__button_image" class="edit__button">編集</a>
-@endif
 <div class="image__attachment">
   
     <div class="column1__text sp__active">

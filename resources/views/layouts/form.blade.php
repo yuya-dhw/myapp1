@@ -24,6 +24,30 @@
   <div class="form__wrapper">
     @yield('form_area')
   </div>
+  <footer class="navigation">
+    <ul class="navigation__area">
+      <li class="navigation__icon">
+        <a href="{{route('mail')}}"><img src="{{asset('/storage/common/mail.png')}}" alt="mail icon"></a>
+      </li>
+      <li class="navigation__icon">
+        <a href="{{route('insight')}}"><img src="{{asset('/storage/common/insight.png')}}" alt="recommendation icon"></a>
+      </li>
+      <li class="navigation__icon">
+        <a href="{{route('search')}}"><img src="{{asset('/storage/common/search.png')}}" alt="search icon"></a>
+      </li>
+      
+      <li class="navigation__icon">
+      @auth
+        <a href="{{route('index')}}"><img src="{{asset('/storage/common/register.png')}}" alt="mypage icon" id="mypage"></a>
+      @endauth
+      @empty($mypage)
+        <a href="{{route('register')}}"><img src="{{asset('/storage/common/register.png')}}" alt="registration icon"></a>
+      @endempty
+      </li>
+      
+    </ul>
+  </footer>
+
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/remodal/1.0.5/remodal.min.js"></script>
 <script src="https://kit.fontawesome.com/3027a76dab.js" crossorigin="anonymous"></script>
