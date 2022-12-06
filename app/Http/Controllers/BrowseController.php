@@ -35,7 +35,7 @@ class BrowseController extends Controller
 
 
         if($id == Auth::id()){
-            return redirect('profile');
+            return redirect(route('index'));
         }
         $user = User::find($id);
         $image = Image::where('global_id', $id)->first();

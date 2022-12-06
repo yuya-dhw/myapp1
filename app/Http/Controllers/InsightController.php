@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
 use App\Models\User;
@@ -22,6 +23,9 @@ class InsightController extends Controller
         ->first();
 
         $id = $random_user->id;
+            if($id == Auth::id()){
+                return redirect(route('index'));
+            };
         $user = User::find($id);
         $image = Image::where('global_id', $id)->first();
         $base = Base::where('global_id', $id)->first();

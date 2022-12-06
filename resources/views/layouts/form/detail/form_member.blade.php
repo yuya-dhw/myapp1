@@ -4,7 +4,7 @@
 
 <div class="form__area_member">
 <div class="back__button_area">
-  <a href="{{route('index')}}" class="back__button_content">完了</a>
+  <a href="{{route('edit')}}" class="back__button_content">完了</a>
 </div>
 @if(DB::table('members')->where('global_id', Auth::id())->exists())
 <h3 class="member__title_sub">現在のメンバー</h3>

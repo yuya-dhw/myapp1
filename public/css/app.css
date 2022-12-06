@@ -851,7 +851,7 @@ input[type="radio"]:checked + label{
 }
 .form__area_image,.form__area_goal,.form__area_connection{
   display: block;
-  margin: 40px auto 0;
+  margin: 40px auto 80px;
   padding:0 20px;
   height:80%;
   width: 100%;
@@ -859,7 +859,7 @@ input[type="radio"]:checked + label{
 }
 .form__area_base{
   display: block;
-  margin: 40px auto 0;
+  margin: 40px auto 80px;
   padding:0 20px;
   width: 100%;
   max-width:1040px;
@@ -871,6 +871,7 @@ input[type="radio"]:checked + label{
   height:80%;
   width: 100%;
   max-width:380px;
+  margin-bottom: 80px;
 }
 .form__area_setting{
   display: block;
@@ -879,6 +880,24 @@ input[type="radio"]:checked + label{
   height:80%;
   width: 100%;
   max-width:1040px;
+}
+.form__navigation{
+  width:100%;
+  max-width:320px;
+  margin:40px auto;
+}
+.form__navigation li + li{
+  margin-top: 40px;
+}
+.form__navigation_option{
+  text-align: left;
+}
+.form__navigation_option a{
+  font-size: 2rem;
+}
+.form__navigation_option i{
+  font-size: 2rem;
+  margin-right:20px;
 }
 
 #drop-zone{
@@ -965,7 +984,7 @@ input[type="radio"]:checked + label{
   margin-top: 20px;
 }
 .existing__member,.existing__film{
-  height:20vh;
+  height:300px;
   padding: 10px;
   border: solid 1px #eee;
   overflow-y: scroll;
