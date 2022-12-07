@@ -34,7 +34,7 @@
           <button formaction="{{route('connection_delete')}}" class="interaction__delete" name="connection">人脈を削除</button>
         @endif
         </form>
-        <button class="interaction__general share__button" name="share">共有</button>
+        <button class="interaction__general share__button"><a href="#modal0" class="modal__link" name="share">共有</a></button>
     </div>
   </div>
 </div>
@@ -43,7 +43,7 @@
     @if($base->release_exist == 1)
     <a href="#modal1" class="modal__link">
       <h4 class="announce__type">次のリリース
-        @isset($release_month)
+        @isset($base->release_date)
           <span class="announce__date">{{$release_month}}&#047;{{$release_day}}</span>
         @endisset
       </h4>

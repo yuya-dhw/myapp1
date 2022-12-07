@@ -19,7 +19,7 @@
 <body>
   <header class="general__header">
     <img src="{{asset('/storage/common/logo.png')}}" alt="logo">
-    <a href="{{route('setting')}}"><img src="{{asset('/storage/common/setting.png')}}" alt=""></a>
+    <a href="{{route('setting')}}"><i class="fa-solid fa-gear general__header_icon"></i></a>
   </header>
   <div class="form__wrapper">
     @yield('form_area')

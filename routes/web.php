@@ -13,6 +13,7 @@ use App\Http\Controllers\FilmController;
 use App\Http\Controllers\ConnectionController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\InsightController;
+use App\Http\Controllers\MailController;
 
 /*
 |--------------------------------------------------------------------------
@@ -62,6 +63,11 @@ Route::group(['middleware'=>'auth'], function(){
         return view('auth.setting');
     })->name('setting');
 
+    Route::get('mail/list', [MailController::class, 'index'])->name('mail');
+    Route::get('mail/list/{name}',[MailController::class, 'check'])->name('mail_check');
+    Route::get('mail/send/{name}', [MailController::class, 'prepare'])->name('mail_edit');
+    Route::post('mail/send/{name}/post', [MailController::class, 'post'])->name('mail_post');
+
 });
 
     Route::get('profile/{name?}',[BrowseController::class, 'index'])->name('browse');
@@ -70,6 +76,4 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('/search', [SearchController::class, 'index'])->name('search');
     Route::post('/search/result', [SearchController::class, 'runsearch'])->name('search_result');
     Route::get('/insight', [InsightController::class, 'random'])->name('insight');
-     Route::get('/mail', function(){
-        abort(404);
-     })->name('mail');
+     

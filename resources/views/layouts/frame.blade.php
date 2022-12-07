@@ -1,9 +1,11 @@
 <div class="general__header">
     @if($user->id == Auth::id())
     <a href="{{route('edit')}}" id="edit__button_entrance" class="edit__button">編集</a>
+    @else
+    <a href="{{route('mail_edit',['name' => $user->name])}}" class="direct__button"><i class="fa-solid fa-paper-plane general__header_icon"></i></i></a>
     @endif
     <img src="{{asset('/storage/common/logo.png')}}" alt="logo">
-    <a href="{{route('setting')}}"><img src="{{asset('/storage/common/setting.png')}}" alt="setting"></a>
+    <a href="{{route('setting')}}"><i class="fa-solid fa-gear general__header_icon"></i></a>
 </div>
 
 <div class="contents-wrapper">

@@ -71,6 +71,13 @@ iframe{
   height:30px;
   object-position: 50% 50%;
 }
+.general__header_icon{
+  font-size: 3rem;
+  color:#999;
+  margin-top:20px;
+  padding:0 20px;
+
+}
 
 
 /*pc版プロフィールページ*/
@@ -255,6 +262,11 @@ iframe{
 }
 .connection__button{
   margin-bottom: 20px;
+}
+.modal__link{
+  display: block;
+  width:100%;
+  height:100%;
 }
 .artist__announce{
   margin-top: 40px;
