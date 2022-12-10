@@ -15,6 +15,7 @@ a{
 }
 i{
   color:#777;
+  font-size: 3rem;
 }
 iframe{
   display: block;
@@ -262,6 +263,28 @@ iframe{
 }
 .connection__button{
   margin-bottom: 20px;
+}
+.share__area_link{
+  display: flex;
+}
+#share__link{
+  border: solid 1px #eee;
+  border-radius: 5px 0 0 5px;
+  text-align: left;
+  
+  margin:0;
+  flex:8;
+}
+.share__button_link{
+  flex:1;
+  border-radius: 0 5px 5px 0;
+  background-color: #eee;
+}
+.share__button_link i{
+  font-size: 1.6rem;
+}
+.twitter-share-button{
+  display: block;
 }
 .modal__link{
   display: block;

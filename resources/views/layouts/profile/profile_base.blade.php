@@ -35,6 +35,23 @@
         @endif
         </form>
         <button class="interaction__general share__button"><a href="#modal0" class="modal__link" name="share">共有</a></button>
+        <div class="remodal share__area" data-remodal-id="modal0">
+          <div class="share__area_link">
+            <input id="share__link" type="text" value="localhost/profile/{{$user->name}}" readonly="readonly">
+            <!--本番環境アップ時にリンクを正規のものに変更-->
+            <button class="share__button_link"  onclick="Clipboard()"><i class="fa-solid fa-clipboard"></i></button>
+          </div>
+          <div class="share__area_sns">
+          <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </div>
+          <script>
+            function Clipboard(){
+              const link = document.getElementById('share__link');
+              navigator.clipboard.writeText(link.value);
+              alert("コピーできました")
+            }
+          </script>
+        </div>
     </div>
   </div>
 </div>

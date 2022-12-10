@@ -27,17 +27,17 @@
   <footer class="navigation">
     <ul class="navigation__area">
       <li class="navigation__icon">
-        <a href="{{route('mail')}}"><img src="{{asset('/storage/common/mail.png')}}" alt="mail icon"></a>
+        <a href="{{route('mail')}}"><i class="fa-solid fa-envelope"></i></a>
       </li>
       <li class="navigation__icon">
-        <a href="{{route('insight')}}"><img src="{{asset('/storage/common/insight.png')}}" alt="recommendation icon"></a>
+        <a href="{{route('insight')}}"><i class="fa-solid fa-earth-asia"></i></a>
       </li>
       <li class="navigation__icon">
-        <a href="{{route('search')}}"><img src="{{asset('/storage/common/search.png')}}" alt="search icon"></a>
+        <a href="{{route('search')}}"><i class="fa-solid fa-magnifying-glass"></i></a>
       </li>
       
       <li class="navigation__icon">
-        <a href="{{route('index')}}"><img src="{{asset('/storage/common/register.png')}}" alt="mypage icon" id="mypage"></a>
+        <a href="{{route('index')}}"><i class="fa-solid fa-user"></i></a>
       </li>
       
     </ul>

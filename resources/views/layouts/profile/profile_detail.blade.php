@@ -1,9 +1,9 @@
 <div class="artist__info">
       <ul class="tab">
-        <li><a href="#goal"><img src="{{asset('/storage/common/goal.png')}}" alt="goal icon" class="detail__icon"></a></li>
-        <li><a href="#member"><img src="{{asset('/storage/common/member.png')}}" alt="member icon" class="detail__icon"></a></li>
-        <li><a href="#film"><img src="{{asset('/storage/common/film.png')}}" alt="film icon" class="detail__icon"></a></li>
-        <li><a href="#connection"><img src="{{asset('/storage/common/connection.png')}}" alt="connection icon" class="detail__icon"></a></li>
+        <li><a href="#goal"><i class="fa-solid fa-compass"></i></a></li>
+        <li><a href="#member"><i class="fa-solid fa-user-group"></i></a></li>
+        <li><a href="#film"><i class="fa-brands fa-youtube"></i></a></li>
+        <li><a href="#connection"><i class="fa-solid fa-handshake"></i></a></li>
       </ul>
 
       <div id="goal" class="info__area">
