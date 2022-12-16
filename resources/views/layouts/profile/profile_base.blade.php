@@ -45,10 +45,15 @@
           <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
           </div>
           <script>
-            function Clipboard(){
+            
+            async function Clipboard() {
               const link = document.getElementById('share__link');
-              navigator.clipboard.writeText(link.value);
-              alert("コピーできました")
+              try {
+                await navigator.clipboard.writeText(link.value);
+                alert('コピーできました');
+              } catch (err) {
+                alert('コピーできませんでした', err);
+              }
             }
           </script>
         </div>

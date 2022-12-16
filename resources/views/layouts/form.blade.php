@@ -7,7 +7,18 @@
 <meta property="og:title" content="comusion The Concept Architecture for Independent Artist"></meta>
 <meta property="og:image" content="{{asset('/storage/common/top.png')}}"></meta>
 <meta property="og:description" content="アーティストのためのコンセプト設計・共有アプリ">
+
+@if(Request::routeIs('search','search_result'))
+<title>アーティスト検索</title>
+@elseif(Request::routeIs('mail'))
+<title>メールボックス</title>
+@elseif(Request::routeIs('nail_check'))
+<title>{{$name}}さんとの通信履歴</title>
+@elseif(Request::routeIs('mail_edit'))
+<title>メール作成</title>
+@else
 <title>プロフィール編集</title>
+@endif
 <!--ファビコンとapple touch iconを設定する-->
 <link rel="stylesheet" href="{{asset('/css/reset.css')}}">
 <link rel="stylesheet" href="{{asset('/css/app.css')}}">

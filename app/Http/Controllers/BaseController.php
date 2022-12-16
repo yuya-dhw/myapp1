@@ -72,7 +72,7 @@ class BaseController extends Controller
             'event_place'=>$request->input('event_place'),
             'event_name'=>$request->input('event_name'),
             'event_link'=>$request->input('event_link'),
-            'event_link_con'=>$request->input('event_link_com'),
+            'event_link_com'=>$request->input('event_link_com'),
         ]);
         return redirect(route('index'));
     }
