@@ -14,6 +14,9 @@ class FilmController extends Controller
         $films = Film::Where('global_id', Auth::id())->get();
         return view('profile.edit.detail.edit_film', compact('films'));
     }
+    public function add(){
+        return view('profile.edit.detail.add_film');
+    }
     public function create(Request $request){
         $validator = Validator::make($request->all(),[
             'film_name'=>'required|max:30',

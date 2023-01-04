@@ -44,11 +44,13 @@ Route::group(['middleware'=>'auth'], function(){
     Route::get('profile/edit/goal', [GoalController::class, 'index'])->name('goal_edit');
     Route::post('profile/edit/goal/post', [GoalController::class, 'update'])->name('goal_post');
     Route::get('profile/edit/member', [MemberController::class, 'index'])->name('member_edit');
+    Route::get('profile/edit/member/add', [MemberController::class, 'add'])->name('member_add');
     Route::post('profile/edit/member/post', [MemberController::class, 'create'])->name('member_create');
     Route::get('profile/edit/member/{id}',[MemberController::class, 'prepare'])->name('member_rewrite');
     Route::post('profile/edit/member/{id}/post',[MemberController::class, 'update'])->name('member_rewrite_post');
     Route::post('profile/edit/member/delete/{id}', [MemberController::class, 'delete'])->name('member_delete');
     Route::get('profile/edit/film', [FilmController::class, 'index'])->name('film_edit');
+    Route::get('profile/edit/film/add', [FilmController::class, 'add'])->name('film_add');
     Route::post('profile/edit/film/post', [FilmController::class, 'create'])->name('film_create');
     Route::get('profile/edit/film/{id}',[FilmController::class, 'prepare'])->name('film_rewrite');
     Route::post('profile/edit/film/{id}/post',[FilmController::class, 'update'])->name('film_rewrite_post');

@@ -1,13 +1,10 @@
 @extends('layouts.form')
 @section('form_area')
-<h2 class="form__title">メンバー情報編集</h2>
 
 <div class="form__area_member">
-<div class="back__button_area">
-  <a href="{{route('edit')}}" class="back__button_content">完了</a>
-</div>
+
 @if(DB::table('members')->where('global_id', Auth::id())->exists())
-<h3 class="member__title_sub">現在のメンバー</h3>
+<!--<h3 class="member__title_sub">現在のメンバー</h3>
 <ul class="existing__member">
   @foreach($members as $member)
   <li class="member__card">
@@ -29,7 +26,7 @@
   @endforeach
 </ul>
 @endif
-
+-->
 
 <form action="{{route('member_rewrite_post', ['id'=>$old_member->id])}}" method="POST">
   @csrf

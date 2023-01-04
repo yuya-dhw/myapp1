@@ -3,7 +3,7 @@
 
 <ul class="tab mail__tab">
   <li>
-    <a href="#youmails"><i class="fa-solid fa-inbox"></i></a>
+    <a href="#yourmails"><i class="fa-solid fa-inbox"></i></a>
   </li>
   <li>
     <a href="#mymails"><i class="fa-solid fa-paper-plane"></i></a>

@@ -1,38 +1,7 @@
 @extends('layouts.form')
 @section('form_area')
-<!--<h2 class="form__title">メンバー情報編集</h2>-->
-
 <div class="form__area_member">
-<div class="back__button_area">
-  <a href="{{route('edit')}}" class="back__button_content">完了</a>
-</div>
-<a href="{{route('member_add')}}" class="member__add_button"><i class="fa-solid fa-circle-plus"></i>メンバーを追加</a>
 
-@if(DB::table('members')->where('global_id', Auth::id())->exists())
-<!--<h3 class="member__title_sub">現在のメンバー</h3>-->
-<ul class="existing__member">
-  @foreach($members as $member)
-  <li class="member__card">
-    <div class="member__edit_top">
-      <div class="member_top">
-      <h5 class="member_name">{{$member->name}}</h5>
-      </div>
-      <div class="member__interaction">
-        <a href="{{route('member_rewrite',['id'=>$member->id])}}"><i class="fa-solid fa-pen-to-square"></i></a>
-        <form method="POST" action="{{route('member_delete',['id'=>$member->id])}}">
-        @csrf
-        <button type="submit"><i class="fa-solid fa-trash"></i></button>
-        </form>
-      </div>
-    </div>
-    <h6 class="member_part">{{$member->part}}</h6>
-    <h6 class="member_role">{{$member->role}}</h6>
-  </li>
-  @endforeach
-</ul>
-@endif
-
-<!--
 <form action="{{route('member_create')}}" method="POST">
   @csrf
   
@@ -87,8 +56,7 @@
     @enderror
   </li>
 </ul>
--->
-
-
+<button type="submit" class="member__submit_button">追加</button>
+</form>
 </div>
 @endsection

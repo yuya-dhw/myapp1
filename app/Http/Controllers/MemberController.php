@@ -14,6 +14,9 @@ class MemberController extends Controller
         $members = Member::where('global_id', Auth::id())->get();
         return view('profile.edit.detail.edit_member', compact('members')); 
     }
+    public function add(){
+        return view('profile.edit.detail.add_member');
+    }
     public function create(Request $request){
         $validator = Validator::make($request->all(),[
             'member_name'=>'bail|required|max:25',
