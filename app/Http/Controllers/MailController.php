@@ -13,8 +13,8 @@ use App\Models\Mail;
 class MailController extends Controller
 {
     public function index(){
-        $yourmails = Mail::where('address', Auth::user()->name)->get();
-        $mymails = Mail::where('sender', Auth::user()->name)->get();
+        $yourmails = Mail::where('address', Auth::user()->name)->latest()->get();
+        $mymails = Mail::where('sender', Auth::user()->name)->latest()->get();
         $sender_names = Mail::select('sender')
         ->where('address', Auth::user()->name)
         ->latest('created_at')
@@ -28,31 +28,33 @@ class MailController extends Controller
         return view('mail.list',compact(
             'yourmails', 
             'sender_names', 
-            
             'mymails',
             'address_names',
-            
         ));
     }
-    public function check($name){
-        $yourmails = Mail::where('address',Auth::user()->name)
-        ->where('sender', $name)
-        ->latest('created_at')
-        ->get();
-        return view('mail.list',compact(
-            'yourmails',
-            'name'
-        ));
+    public function read(Request $request, $id){
+        $mail = Mail::find($id);
 
+        $mail->update([
+            'read'=>$request->input('read')
+        ]);
+        return redirect(route('mail_check', ['id' => $mail->id]));
     }
+    public function check($id){
+        $mail = Mail::find($id);
+        return view('mail.check',compact('mail', 'id'));
+    }
+    
     public function prepare($name){
         $sender = User::find(Auth::id());
         return view('mail.edit',compact(
             'sender',
             'name'
         ));
-
-
+    }
+    public function reply($id){
+        $mail = Mail::find($id);
+        return view('mail.reply', compact('mail', 'id'));
     }
     public function post(Request $request, $name){
         $validate = $request->validate([

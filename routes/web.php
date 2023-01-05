@@ -66,9 +66,11 @@ Route::group(['middleware'=>'auth'], function(){
     })->name('setting');
 
     Route::get('mail/list', [MailController::class, 'index'])->name('mail');
-    Route::get('mail/list/{name}',[MailController::class, 'check'])->name('mail_check');
+    Route::get('mail/reply/{id}', [MailController::class, 'reply'])->name('mail_reply');
+    Route::get('mail/list/{id}',[MailController::class, 'check'])->name('mail_check');
     Route::get('mail/send/{name}', [MailController::class, 'prepare'])->name('mail_edit');
     Route::post('mail/send/{name}/post', [MailController::class, 'post'])->name('mail_post');
+    Route::post('mail/read/{id}', [MailController::class, 'read'])->name('mail_read');
 
 });
 

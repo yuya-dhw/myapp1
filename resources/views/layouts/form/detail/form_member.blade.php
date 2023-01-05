@@ -3,9 +3,6 @@
 <!--<h2 class="form__title">メンバー情報編集</h2>-->
 
 <div class="form__area_member">
-<div class="back__button_area">
-  <a href="{{route('edit')}}" class="back__button_content">完了</a>
-</div>
 <a href="{{route('member_add')}}" class="member__add_button"><i class="fa-solid fa-circle-plus"></i>メンバーを追加</a>
 
 @if(DB::table('members')->where('global_id', Auth::id())->exists())

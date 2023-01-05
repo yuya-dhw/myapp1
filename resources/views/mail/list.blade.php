@@ -12,10 +12,19 @@
   <div id="yourmails" class="info__area mail__list_area">
     @isset($yourmails)
     @foreach($yourmails as $yourmail)
-    <li>
-      <h3>{{$yourmail->sender}}</h3>
-      <h4>{{$yourmail->title}}</h4>
-      <p>{{$yourmail->content}}</p>
+    <li class="mail__card">
+      <form method="POST" action="{{route('mail_read', ['id'=>$yourmail->id])}}">
+        @csrf 
+        <input type="hidden" name="read" value=1> 
+          <button type="submit">
+            <h3>{{$yourmail->sender}}</h3>
+            <h4>{{$yourmail->title}}</h4>
+            <p>{{$yourmail->content}}</p>
+          </button>
+      </form>
+      @if($yourmail->read == 0)
+        <i class="read__badge"></i>
+      @endif
     </li>
     @endforeach
   @endisset
