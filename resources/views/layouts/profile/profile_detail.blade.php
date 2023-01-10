@@ -34,7 +34,7 @@
           @foreach($films as $film)
           <li class="film__card">
            <h5 class="film__name">{{$film->name}}</h5>
-           <iframe width="200" height="117" src="https://www.youtube.com/embed/{{str_replace('https://youtu.be/','',$film->link)}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="film__content"></iframe>
+           <iframe width="288" height="164" src="https://www.youtube.com/embed/{{str_replace('https://youtu.be/','',$film->link)}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="film__content"></iframe>
           </li>
           @endforeach
         </ul>
@@ -47,7 +47,7 @@
         <ul class="connection__list">
           @foreach($connections as $connection)
           <li class="connection__card">
-            <a href="{{$connection->link}}" class="connection__image_area">
+            <a href="{{route('browse', ['name'=>DB::table('users')->find($connection->connected_id)->name])}}" class="connection__image_area">
                 <img src="{{asset($connection->path)}}" alt="artist that have a connection with them" class="connection__image">
             </a>
             <a href="{{$connection->link}}" class="connection__text_area">
@@ -59,7 +59,7 @@
                 </div>
                 <p class="connection__desc">{{$connection->description}}</p>
                 @if($connection->global_id == Auth::id())
-                  <a href="{{route('connection_edit', ['id'=>$connection->id])}}" class="edit__button" id="edit__button_connection">編集</a>
+                  <a href="{{route('browse', ['name'=>DB::table('users')->find($connection->connected_id)->name])}}" class="edit__button" id="edit__button_connection">編集</a>
                 @endif
             </a>
           </li>

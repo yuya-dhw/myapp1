@@ -23,7 +23,7 @@
           </button>
       </form>
       @if($yourmail->read == 0)
-        <i class="read__badge"></i>
+        <i class="new__badge"></i>
       @endif
     </li>
     @endforeach
@@ -33,9 +33,14 @@
   @isset($mymails)
     @foreach($mymails as $mymail)
     <li>
+      <a href="{{route('mail_check', ['id'=>$mymail->id])}}">
       <h3>{{$mymail->address}}</h3>
       <h4>{{$mymail->title}}</h4>
       <p>{{$mymail->content}}</p>
+      @if($mymail->read == 1)
+        <div class="read__badge">既読</div>
+      @endif
+      </a>
     </li>
     @endforeach
     @endisset
