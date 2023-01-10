@@ -50,7 +50,7 @@
             <a href="{{route('browse', ['name'=>DB::table('users')->find($connection->connected_id)->name])}}" class="connection__image_area">
                 <img src="{{asset($connection->path)}}" alt="artist that have a connection with them" class="connection__image">
             </a>
-            <a href="{{$connection->link}}" class="connection__text_area">
+            <a href="{{route('browse', ['name'=>DB::table('users')->find($connection->connected_id)->name])}}" class="connection__text_area">
                 <h5 class="connection__project_name">{{$connection->name}}</h5>
                 <div class="connection__tags">
                   <h6 class="connection__tag">{{$connection->genre}}</h6>
@@ -59,7 +59,7 @@
                 </div>
                 <p class="connection__desc">{{$connection->description}}</p>
                 @if($connection->global_id == Auth::id())
-                  <a href="{{route('browse', ['name'=>DB::table('users')->find($connection->connected_id)->name])}}" class="edit__button" id="edit__button_connection">編集</a>
+                  <a href="{{route('connection_edit', ['id'=>$connection->id])}}" class="edit__button" id="edit__button_connection">編集</a>
                 @endif
             </a>
           </li>
