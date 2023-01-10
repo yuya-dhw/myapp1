@@ -6,7 +6,7 @@
 <meta name="twitter:card" content="summary"></meta>
 <meta property="og:title" content="comusion The Concept Architecture for Independent Artist"></meta>
 <meta property="og:image" content="{{asset('/storage/common/top.png')}}"></meta>
-<meta property="og:description" content="アーティストのためのコンセプト設計・共有アプリ">
+<meta property="og:description" content="アーティストのためのコンセプト設計・共有アプリ"></meta>
 
 @if(Request::routeIs('search','search_result'))
 <title>アーティスト検索</title>

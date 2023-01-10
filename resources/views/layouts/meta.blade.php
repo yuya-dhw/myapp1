@@ -7,7 +7,7 @@
 @empty($user)
 <meta property="og:title" content="comusion The Concept Architecture for Independent Artist"></meta>
 <meta property="og:image" content="{{asset('/storage/common/top.png')}}"></meta>
-<meta property="og:description" content="アーティストのためのコンセプト設計・共有アプリ">
+<meta property="og:description" content="アーティストのためのコンセプト設計・共有アプリ"></meta>
 @endempty
 @isset($user)
 <meta property="og:title" content="{{$base->project_name}}"></meta>
