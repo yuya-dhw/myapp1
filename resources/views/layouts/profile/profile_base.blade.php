@@ -37,7 +37,7 @@
         <button class="interaction__general share__button"><a href="#modal0" class="modal__link" name="share">共有</a></button>
         <div class="remodal share__area" data-remodal-id="modal0">
           <div class="share__area_link">
-            <input id="share__link" type="text" value="localhost/profile/{{$user->name}}" readonly="readonly">
+            <input id="share__link" type="text" value="{{route('browse', ['name'=>DB::table('users')->find($user->id)->name])}}" readonly="readonly">
             <!--本番環境アップ時にリンクを正規のものに変更-->
             <button class="share__button_link"  onclick="Clipboard()"><i class="fa-solid fa-clipboard"></i></button>
           </div>
