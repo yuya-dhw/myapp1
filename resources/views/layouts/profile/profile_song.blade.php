@@ -15,12 +15,12 @@
                   playbutton.addEventListener('click', function () {
                     if(audio.paused){
                       audio.play();
-                      $('i').removeClass('fa-solid fa-play');
-                      $('i').addClass('fa-solid fa-pause');
+                      $('#button__icon').removeClass('fa-solid fa-play');
+                      $('#button__icon').addClass('fa-solid fa-pause');
                     }else{
                       audio.pause();
-                      $('i').removeClass('fa-solid fa-pause');
-                      $('i').addClass('fa-solid fa-play');
+                      $('#button__icon').removeClass('fa-solid fa-pause');
+                      $('#button__icon').addClass('fa-solid fa-play');
                     }
                   
                   });
