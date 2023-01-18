@@ -16,8 +16,9 @@
     <div class="mail__body_area">
 
       <p class="mail__content">{{$mail->content}}</p>
-
+    <div class="mail__button_area">
       <a href="{{route('mail_reply', ['id' => $mail->id])}}" class="mail__send_button"><i class="fa-solid fa-reply"></i></a>
+    </div>
     </div>
   </form>
 </div>

@@ -203,6 +203,9 @@ return [
 
         'connection_description'=>'関係性',
 
+        'mail_body'=>'本文',
+        'mail_title'=>'タイトル'
+
     ],
 
 ];

@@ -30,8 +30,9 @@
     </ul>
   @enderror
 <textarea name="mail_body" id="mail_body" cols="30" rows="15" placeholder="本文を入力"></textarea>
-
-<button type="submit" class="mail__send_button"><i class="fa-solid fa-paper-plane"></i></button>
+<div class="mail__button_area">
+  <button type="submit" class="mail__send_button"><i class="fa-solid fa-paper-plane"></i></button>
+</div>
 </div>
 </form>
 </div>

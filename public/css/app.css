@@ -1215,14 +1215,25 @@ input[type="radio"]:checked + label{
 #mail_body::placeholder{
   color:#999;
 }
+.mail__button_area{
+  display: block;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+  bottom: 20%;
+  padding: 0 40px;
+  text-align: right;
+  position: fixed;
+  bottom:30%;
+}
 .mail__send_button{
   background-color: #44bbe7;
   display: inline-block;
   padding:10px;
   border-radius: 40px;
-  position: absolute;
+  /*position: absolute;
   bottom:30%;
-  right:0;
+  right:0;*/
 }
 .mail__send_button i{
   font-size: 2rem;
